@@ -8,7 +8,14 @@
 			"tenure":"Freehold",
 			"description":"Attractive three bedroom semi-detached family home situated within 0.5 miles of Petts Wood station with fast trains to London and within easy walking distance of local shops, schools, bus routes and National Trust woodland. The property comprises; two receptions, fitted 18'9 x 10'1 kitchen/breakfast room and conservatory. The property also benefits from having a utility room and cloakroom. To the first floor there are three bedrooms and a family bathroom with separate WC. Additional features include double glazing, gas central heating and a well presented interior...",
 			"location":"Petts Wood Road, Petts Wood, Orpington BR5",
-			"picture":"images/prop1-1.png",
+			"picture": [
+                "/images/prop1-1.png", 
+                "/images/prop1-2.jpeg", 
+                "/images/prop1-3.jpeg", 
+                "/images/prop1-4.jpeg", 
+                "/images/prop1-2.jpeg", 
+                "/images/prop1-3.jpeg"
+            ],
 			"url":"properties/prop1.html",
             "added": {
                 "month":"October",
@@ -24,7 +31,14 @@
 			"tenure":"Freehold",
 			"description":"Presented in excellent decorative order throughout is this two double bedroom, two bathroom, garden flat. <br>The modern fitted kitchen is open plan to the living room which boasts solid wooden floors and includes integrated appliances including a dishwasher & a washing machine. This large open plan benefits from bi folding doors onto a secluded private courtyard garden. Both bedrooms are double sized, and the family bathroom boasts a matching three piece suite a shower attachment over the bath. There is also a separate wet room. There are walnut doors throughout and wiring for Sky TV/aerial points in the living room/kitchen and both bedrooms.<br>This apartment being only five years old, is still under a 10 year building guarantee...",
 			"location":"Crofton Road Orpington BR6",
-			"picture":"images/prop2-1.jpeg",
+			"picture": [
+                "/images/prop2-1.jpeg", 
+                "/images/prop2-2.jpeg", 
+                "/images/prop2-3.jpeg", 
+                "/images/prop2-4.jpeg", 
+                "/images/prop2-5.jpeg", 
+                "/images/prop2-6.jpeg"
+            ],
 			"url":"properties/prop2.html",
             "added": {
                 "month":"September",
@@ -40,7 +54,14 @@
             "tenure": "Leasehold",
             "description": "A stunning four-bedroom detached house located in a quiet cul-de-sac in the heart of Bickley. This spacious property boasts a large living room, a separate dining room, a modern kitchen with a breakfast bar, and a bright conservatory leading to a beautifully landscaped garden. Upstairs, there are four well-proportioned bedrooms, including a master bedroom with an en-suite bathroom, and a family bathroom. Other features include a double garage, off-street parking, and easy access to local schools and transport links.",
             "location": "Oaklands Road, Bickley, Bromley BR1",
-            "picture": "images/prop3-1.jpeg",
+            "picture": [
+                "/images/prop3-1.jpeg", 
+                "/images/prop3-2.jpeg", 
+                "/images/prop3-3.jpeg", 
+                "/images/prop3-4.jpeg", 
+                "/images/prop3-5.jpeg", 
+                "/images/prop3-6.jpeg"
+            ],
             "url": "properties/prop3.html",
             "added": {
                 "month": "November",
@@ -56,7 +77,14 @@
             "tenure": "Freehold",
             "description": "Modern one-bedroom apartment located within walking distance of Bromley South station. This bright and airy flat features a spacious open-plan kitchen and living area with integrated appliances, a large double bedroom with built-in wardrobes, and a contemporary bathroom. The property benefits from a secure entry system, communal gardens, and allocated parking. Ideal for first-time buyers or investors.",
             "location": "Bromley High Street, Bromley BR2",
-            "picture": "images/prop4-1.jpeg",
+            "picture": [
+                "/images/prop4-1.jpeg", 
+                "/images/prop4-2.jpeg", 
+                "/images/prop4-3.jpeg", 
+                "/images/prop4-4.jpeg", 
+                "/images/prop4-5.jpeg", 
+                "/images/prop4-6.jpeg"
+            ],
             "url": "properties/prop4.html",
             "added": {
                 "month": "August",
@@ -72,7 +100,14 @@
             "tenure": "Freehold",
             "description": "An impressive five-bedroom detached family home situated in a prestigious private road in Chislehurst. This property offers generous living space with a grand entrance hall, a formal lounge, a study, a state-of-the-art kitchen with a central island, and a separate utility room. The master bedroom includes a walk-in wardrobe and en-suite bathroom, and there are two additional en-suites upstairs. The south-facing garden is perfect for entertaining, and the driveway provides ample parking. Close to Chislehurst station and excellent schools.",
             "location": "Camden Park Road, Chislehurst BR7",
-            "picture": "images/prop5-1.jpeg",
+            "picture": [
+                "/images/prop5-1.jpeg", 
+                "/images/prop5-2.jpeg", 
+                "/images/prop5-3.jpeg", 
+                "/images/prop5-4.jpeg", 
+                "/images/prop5-5.jpeg", 
+                "/images/prop5-6.jpeg"
+            ],
             "url": "properties/prop5.html",
             "added": {
                 "month": "July",
@@ -88,7 +123,14 @@
             "tenure": "Leasehold",
             "description": "A beautifully presented three-bedroom penthouse apartment situated in a sought-after development in Beckenham. This property boasts a spacious open-plan living area with a high-end kitchen, three double bedrooms with fitted wardrobes, two luxury bathrooms (one en-suite), and a wraparound terrace offering stunning views of the city. Additional benefits include underfloor heating, allocated parking, and access to a private residents' gym.",
             "location": "Southend Road, Beckenham BR3",
-            "picture": "images/prop6-1.jpeg",
+            "picture": [
+                "/images/prop6-1.jpeg", 
+                "/images/prop6-2.jpeg", 
+                "/images/prop6-3.jpeg", 
+                "/images/prop6-4.jpeg", 
+                "/images/prop6-5.jpeg", 
+                "/images/prop6-6.jpeg"
+            ],
             "url": "properties/prop6.html",
             "added": {
                 "month": "October",
@@ -104,7 +146,14 @@
             "tenure": "Freehold",
             "description": "Charming two-bedroom cottage situated in the picturesque village of Farnborough. This quaint property offers a cozy living room with a log-burning fireplace, a modern kitchen with shaker-style units, and a dining area overlooking the garden. Upstairs are two bedrooms with period features and a contemporary family bathroom. The rear garden is beautifully landscaped with a patio and flower beds. Within close proximity to local shops, schools, and transport links.",
             "location": "Church Road, Farnborough BR6",
-            "picture": "images/prop7-1.jpeg",
+            "picture": [
+                "/images/prop7-1.jpeg", 
+                "/images/prop7-2.jpeg", 
+                "/images/prop7-3.jpeg", 
+                "/images/prop7-4.jpeg", 
+                "/images/prop7-5.jpeg", 
+                "/images/prop7-3.jpeg"
+            ],
             "url": "properties/prop7.html",
             "added": {
                 "month": "September",
