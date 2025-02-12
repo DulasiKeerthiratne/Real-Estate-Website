@@ -57,6 +57,13 @@ const Filter = () => {
           <TextField id="maxDate" label="Max Date" type="date" value={maxDate} onChange={(e) => setMaxDate(e.target.value)} InputLabelProps={{ shrink: true }} />
           <TextField id="postcode" label="Postcode" type="text" value={postcode} onChange={(e) => setPostcode(e.target.value)} />
         </form>
+
+        {/* Favorites Section (UI Only) */}
+        <div className="mt-4">
+          <h3>Favorites</h3>
+          <button className="btn btn-danger mb-2" disabled>Clear Favorites</button>
+          <p>No favorite properties yet.</p>
+        </div>
       </div>
 
       <div className='col-md-8'>
@@ -75,6 +82,7 @@ const Filter = () => {
                 <p><strong>Bedrooms:</strong> {property.bedrooms}</p>
                 <p><strong>Price:</strong> ${property.price}</p>
                 <p><strong>Description:</strong> {property.description}</p>
+                <button className="btn btn-primary btn-sm" disabled>Add to Favorites</button>
               </div>
             </div>
           ))
