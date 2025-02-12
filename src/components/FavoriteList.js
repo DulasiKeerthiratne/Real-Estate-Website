@@ -30,7 +30,7 @@ const FavoritesList = ({ favorites, clearFavorites, removeFromFavorites }) => {
             onDragStart={(e) => e.dataTransfer.setData('text/plain', fav.id)} // Store the id of the property being dragged
           >
             <div className="me-3">
-              <img src={fav.picture} alt={fav.id} className="img-fluid" style={{ width: '100px', height: 'auto' }} />
+              <img src={fav.picture[0]} alt={fav.id} className="img-fluid" style={{ width: '100px', height: 'auto' }} />
             </div>
             <div>
               <h5>{fav.location}</h5>
