@@ -1,0 +1,20 @@
+
+.MuiTab-root.Mui-selected {
+    color: black !important;
+    font-weight: bold !important;
+}
+  
+
+.MuiTab-root:hover {
+    color: black !important;
+}
+  
+
+.MuiTabs-indicator {
+    background-color: black !important;  /* Tab indicator stays black */
+}
+
+.page-svg {
+    margin-top: 10px;
+    margin-right: 20px;
+}
