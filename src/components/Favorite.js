@@ -1,6 +1,7 @@
 import React from 'react';
 
-const FavoritesList = ({ favorites, clearFavorites, removeFromFavorites }) => {
+// Favorite logic/UI component
+const Favorite = ({ favorites, clearFavorites, removeFromFavorites }) => {
   
   const handleDrop = (e) => {
     // Prevent default behavior
@@ -19,8 +20,8 @@ const FavoritesList = ({ favorites, clearFavorites, removeFromFavorites }) => {
 
   return (
     <div className="mt-4" onDrop={handleDrop} onDragOver={handleDragOver}>
-      <h3>Favorites</h3>
-      <button className="btn btn-danger mb-2" onClick={clearFavorites}>Clear Favorites</button>
+      <h2 className='pb-3 pt-4 fw-bold'>Favorites</h2>
+      <button className="btn btn-dark mb-2" onClick={clearFavorites}>Clear Favorites</button>
       {favorites.length > 0 ? (
         favorites.map((fav, index) => (
           <div
@@ -34,7 +35,7 @@ const FavoritesList = ({ favorites, clearFavorites, removeFromFavorites }) => {
             </div>
             <div>
               <h5>{fav.location}</h5>
-              <button className="btn btn-sm btn-danger" onClick={() => removeFromFavorites(fav.id)}>Remove</button>
+              <button className="btn btn-sm btn-dark" onClick={() => removeFromFavorites(fav.id)}>Remove</button>
             </div>
           </div>
         ))
@@ -45,4 +46,4 @@ const FavoritesList = ({ favorites, clearFavorites, removeFromFavorites }) => {
   );
 };
 
-export default FavoritesList;
+export default Favorite;
