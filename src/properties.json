@@ -31,6 +31,86 @@
                 "day":14,
                 "year":2022
             }
+        },
+        {
+            "id": "prop3",
+            "type": "House",
+            "bedrooms": 4,
+            "price": 950000,
+            "tenure": "Leasehold",
+            "description": "A stunning four-bedroom detached house located in a quiet cul-de-sac in the heart of Bickley. This spacious property boasts a large living room, a separate dining room, a modern kitchen with a breakfast bar, and a bright conservatory leading to a beautifully landscaped garden. Upstairs, there are four well-proportioned bedrooms, including a master bedroom with an en-suite bathroom, and a family bathroom. Other features include a double garage, off-street parking, and easy access to local schools and transport links.",
+            "location": "Oaklands Road, Bickley, Bromley BR1",
+            "picture": "images/prop3-1.jpeg",
+            "url": "properties/prop3.html",
+            "added": {
+                "month": "November",
+                "day": 10,
+                "year": 2022
+            }
+        },
+        {
+            "id": "prop4",
+            "type": "Flat",
+            "bedrooms": 1,
+            "price": 275000,
+            "tenure": "Freehold",
+            "description": "Modern one-bedroom apartment located within walking distance of Bromley South station. This bright and airy flat features a spacious open-plan kitchen and living area with integrated appliances, a large double bedroom with built-in wardrobes, and a contemporary bathroom. The property benefits from a secure entry system, communal gardens, and allocated parking. Ideal for first-time buyers or investors.",
+            "location": "Bromley High Street, Bromley BR2",
+            "picture": "images/prop4-1.jpeg",
+            "url": "properties/prop4.html",
+            "added": {
+                "month": "August",
+                "day": 22,
+                "year": 2023
+            }
+        },
+        {
+            "id": "prop5",
+            "type": "House",
+            "bedrooms": 5,
+            "price": 1250000,
+            "tenure": "Freehold",
+            "description": "An impressive five-bedroom detached family home situated in a prestigious private road in Chislehurst. This property offers generous living space with a grand entrance hall, a formal lounge, a study, a state-of-the-art kitchen with a central island, and a separate utility room. The master bedroom includes a walk-in wardrobe and en-suite bathroom, and there are two additional en-suites upstairs. The south-facing garden is perfect for entertaining, and the driveway provides ample parking. Close to Chislehurst station and excellent schools.",
+            "location": "Camden Park Road, Chislehurst BR7",
+            "picture": "images/prop5-1.jpeg",
+            "url": "properties/prop5.html",
+            "added": {
+                "month": "July",
+                "day": 15,
+                "year": 2022
+            }
+        },
+        {
+            "id": "prop6",
+            "type": "Flat",
+            "bedrooms": 3,
+            "price": 525000,
+            "tenure": "Leasehold",
+            "description": "A beautifully presented three-bedroom penthouse apartment situated in a sought-after development in Beckenham. This property boasts a spacious open-plan living area with a high-end kitchen, three double bedrooms with fitted wardrobes, two luxury bathrooms (one en-suite), and a wraparound terrace offering stunning views of the city. Additional benefits include underfloor heating, allocated parking, and access to a private residents' gym.",
+            "location": "Southend Road, Beckenham BR3",
+            "picture": "images/prop6-1.jpeg",
+            "url": "properties/prop6.html",
+            "added": {
+                "month": "October",
+                "day": 3,
+                "year": 2022
+            }
+        },
+        {
+            "id": "prop7",
+            "type": "House",
+            "bedrooms": 2,
+            "price": 450000,
+            "tenure": "Freehold",
+            "description": "Charming two-bedroom cottage situated in the picturesque village of Farnborough. This quaint property offers a cozy living room with a log-burning fireplace, a modern kitchen with shaker-style units, and a dining area overlooking the garden. Upstairs are two bedrooms with period features and a contemporary family bathroom. The rear garden is beautifully landscaped with a patio and flower beds. Within close proximity to local shops, schools, and transport links.",
+            "location": "Church Road, Farnborough BR6",
+            "picture": "images/prop7-1.jpeg",
+            "url": "properties/prop7.html",
+            "added": {
+                "month": "September",
+                "day": 8,
+                "year": 2022
+            }
         }
     ]
 }
