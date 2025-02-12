@@ -1,10 +1,40 @@
 import React from 'react';
 import propertiesData from './properties.json';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { Select, MenuItem, FormControl, InputLabel, TextField } from '@mui/material';
 
 const PropertyList = () => {
   return (
     <div className="container py-4">
+      {/* Filter Form Section */}
+      <div className="row mb-4">
+        <div className="col-md-4">
+          <h2 className="pb-3">Property Search</h2>
+          <form className="d-grid gap-3">
+            <FormControl fullWidth>
+              <InputLabel>Property Type:</InputLabel>
+              <Select value={''} onChange={() => {}} label="Property Type">
+                <MenuItem value=""><em>Any</em></MenuItem>
+                {/* Replace these with dynamic property types if needed */}
+                <MenuItem value="House">House</MenuItem>
+                <MenuItem value="Flat">Flat</MenuItem>
+                <MenuItem value="Detached">Detached</MenuItem>
+                <MenuItem value="Semi-Detached">Semi-Detached</MenuItem>
+                <MenuItem value="Terraced">Terraced</MenuItem>
+                <MenuItem value="Land">Land</MenuItem>
+                <MenuItem value="Parkhome">Parkhome</MenuItem>
+              </Select>
+            </FormControl>
+            <TextField id="minRooms" label="Min Rooms" type="number" inputProps={{ min: 0 }} />
+            <TextField id="maxRooms" label="Max Rooms" type="number" inputProps={{ min: 0 }} />
+            <TextField id="minDate" label="Min Date" type="date" InputLabelProps={{ shrink: true }} />
+            <TextField id="maxDate" label="Max Date" type="date" InputLabelProps={{ shrink: true }} />
+            <TextField id="postcode" label="Postcode" type="text" />
+          </form>
+        </div>
+      </div>
+
+      {/* Property List Section */}
       <h2 className="mb-4">Property List</h2>
       <div className="row">
         {propertiesData.properties.map((property, index) => (
