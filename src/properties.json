@@ -21,7 +21,9 @@
                 "month":"October",
                 "day":12,
                 "year":2022
-            }
+            },
+            "floorplan": "/images/prop1.jpeg",
+            "coordinates": "53.759892,-1.131300"
         },
 		{
             "id":"prop2",
@@ -44,7 +46,9 @@
                 "month":"September",
                 "day":14,
                 "year":2022
-            }
+            },
+            "floorplan": "/images/prop2.jpeg",
+            "coordinates": "51.52421402822169, -0.14692518521545156"
         },
         {
             "id": "prop3",
@@ -67,7 +71,9 @@
                 "month": "November",
                 "day": 10,
                 "year": 2022
-            }
+            },
+            "floorplan": "/images/prop3.jpeg",
+            "coordinates": "51.64831914289503, 0.1134938492126647"
         },
         {
             "id": "prop4",
@@ -90,7 +96,9 @@
                 "month": "August",
                 "day": 22,
                 "year": 2023
-            }
+            },
+            "floorplan": "/images/prop4.jpeg",
+            "coordinates": "51.50183254295332, -0.15844838239937417"
         },
         {
             "id": "prop5",
@@ -113,7 +121,9 @@
                 "month": "July",
                 "day": 15,
                 "year": 2022
-            }
+            },
+            "floorplan": "/images/prop5.jpeg",
+            "coordinates": "51.207126587117116, 0.05054197097317981"
         },
         {
             "id": "prop6",
@@ -136,7 +146,9 @@
                 "month": "October",
                 "day": 3,
                 "year": 2022
-            }
+            },
+            "floorplan": "/images/prop6.jpeg",
+            "coordinates": "51.50056019323938, -0.1518066701014693"
         },
         {
             "id": "prop7",
@@ -159,7 +171,9 @@
                 "month": "September",
                 "day": 8,
                 "year": 2022
-            }
+            },
+            "floorplan": "/images/prop7.jpeg",
+            "coordinates": "51.51506973026125, 0.5803087619242189"
         }
     ]
 }
