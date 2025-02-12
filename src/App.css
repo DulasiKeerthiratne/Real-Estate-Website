@@ -1,0 +1,132 @@
+/* NavBar CSS */
+nav.navbar {
+    padding-left: 170px;
+    padding-right: 170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .navbar-btn {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    margin-left: 10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+svg {
+    margin-right: 5px;
+    margin-bottom: 10px;
+}
+
+nav .navbar-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+
+/* Home Page CSS */
+.heart-svg {
+    transition: transform 0.1s ease-in-out;
+}
+
+.heart-svg:active {
+    height: 25px;
+    width: 25px;
+}
+
+
+/* Property Page CSS */
+.MuiTab-root.Mui-selected {
+    color: black !important;
+    font-weight: bold !important;
+}
+  
+.MuiTab-root:hover {
+    color: black !important;
+}
+  
+.MuiTabs-indicator {
+    background-color: black !important;
+}
+
+.page-svg {
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+
+/* Footer CSS */
+.footer {
+    padding: 20px 0;
+    margin-top: 20px;
+}
+  
+.footer-text {
+    font-size: 1rem;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.footer .footer-btn {
+    background-color: #000000;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    margin: 0 10px;
+    padding: 5px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.footer .footer-btn:hover {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+/* Style for screens smaller than iPad */
+@media (max-width: 1100px) {
+    .row {
+      flex-direction: column;
+    }
+
+    .col-md-4, .col-md-7 {
+      width: 100%;
+    }
+
+    nav.navbar {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    nav.navbar .container-fluid {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    nav.navbar .d-flex {
+        display: flex;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-container img {
+        width: 100%;
+        height: auto;
+        margin-bottom: 10px;
+    }
+
+    .card-container div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+}

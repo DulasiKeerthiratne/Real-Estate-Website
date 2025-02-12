@@ -12,18 +12,25 @@ const HomePage = () => {
   const [minDate, setMinDate] = useState('');
   const [maxDate, setMaxDate] = useState('');
   const [postcode, setPostcode] = useState('');
-  const [filteredProperties, setFilteredProperties] = useState([]);
+  const [minPrice, setMinPrice] = useState('');
+  const [maxPrice, setMaxPrice] = useState('');
+  const [filteredProperties, setFilteredProperties] = useState(propertiesData.properties); // Initially show all properties
   const [favorites, setFavorites] = useState(() => JSON.parse(localStorage.getItem('favorites')) || []);
 
   // Property types for the filter dropdown
   const propertyTypes = ['House', 'Flat'];
 
-  // Effect to filter properties based on filter criteria
-  useEffect(() => {
+  // Function to filter properties when search is clicked
+  const handleSearch = () => {
     const filterProperties = () => {
       return propertiesData.properties.filter((property) => {
+        // Ensure that property price is a number
+        const propertyPrice = property.price;
+
         // Filter conditions based on user input
         const matchesType = !typeFilter || property.type === typeFilter;
+        const matchesMinPrice = !minPrice || (propertyPrice && propertyPrice >= parseInt(minPrice));
+        const matchesMaxPrice = !maxPrice || (propertyPrice && propertyPrice <= parseInt(maxPrice));
         const matchesMinRooms = !minRooms || property.bedrooms >= parseInt(minRooms);
         const matchesMaxRooms = !maxRooms || property.bedrooms <= parseInt(maxRooms);
         const propertyDate = new Date(`${property.added.year}-${property.added.month}-${property.added.day}`);
@@ -32,12 +39,13 @@ const HomePage = () => {
         const matchesPostcode = !postcode || property.location.toLowerCase().includes(postcode.toLowerCase());
 
         // Return properties that match all conditions
-        return matchesType && matchesMinRooms && matchesMaxRooms && matchesMinDate && matchesMaxDate && matchesPostcode;
+        return matchesType && matchesMinPrice && matchesMaxPrice && matchesMinRooms && matchesMaxRooms && matchesMinDate && matchesMaxDate && matchesPostcode;
       });
     };
 
+    // Update filtered properties based on search criteria
     setFilteredProperties(filterProperties());
-  }, [typeFilter, minRooms, maxRooms, minDate, maxDate, postcode]);
+  };
 
   // Effect to save favorites to localStorage whenever they change
   useEffect(() => {
@@ -62,9 +70,9 @@ const HomePage = () => {
   };
 
   return (
-    <div className='container-fluid'>
+    <div className="container-fluid">
       <div className="p-5 row gap-5 justify-content-center">
-        <div className="col-md-4">
+        <div className="col-12 col-md-4"> {/* Full width for small screens, 4 columns on medium screens */}
           <h2 className="pb-3 fw-bold">Property Search</h2>
           {/* Filter form for the user to apply filters to the property list */}
           <Form
@@ -74,12 +82,15 @@ const HomePage = () => {
             minDate={minDate} setMinDate={setMinDate}
             maxDate={maxDate} setMaxDate={setMaxDate}
             postcode={postcode} setPostcode={setPostcode}
+            minPrice={minPrice} setMinPrice={setMinPrice}
+            maxPrice={maxPrice} setMaxPrice={setMaxPrice}
             propertyTypes={propertyTypes}
+            handleSearch={handleSearch}
           />
           {/* List of favorite properties with an option to clear or remove individual favorites */}
           <Favorite favorites={favorites} clearFavorites={clearFavorites} removeFromFavorites={removeFromFavorites} />
         </div>
-        <div className="col-md-7">
+        <div className="col-12 col-md-7"> {/* Full width for small screens, 7 columns on medium screens */}
           <h2 className="pb-3 fw-bold">Property Results</h2>
           {/* Display filtered properties with an option to add them to favorites */}
           <CardDisplay properties={filteredProperties} addToFavorites={addToFavorites} />
