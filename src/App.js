@@ -11,6 +11,7 @@ const Filter = () => {
   const [maxDate, setMaxDate] = useState('');
   const [postcode, setPostcode] = useState('');
   const [filteredProperties, setFilteredProperties] = useState([]);
+  const [favorites, setFavorites] = useState(() => JSON.parse(localStorage.getItem('favorites')) || []);
 
   const propertyTypes = ['House', 'Flat', 'Detached', 'Semi-Detached', 'Terraced', 'Land', 'Parkhome'];
 
@@ -33,8 +34,28 @@ const Filter = () => {
     setFilteredProperties(result);
   }, [typeFilter, minRooms, maxRooms, minDate, maxDate, postcode]);
 
+  // Effect to save favorites to local storage
+  useEffect(() => {
+    localStorage.setItem('favorites', JSON.stringify(favorites));
+  }, [favorites]);
+
+  const addToFavorites = (property) => {
+    if (!favorites.find((fav) => fav.id === property.id)) {
+      setFavorites([...favorites, property]);
+    }
+  };
+
+  const removeFromFavorites = (propertyId) => {
+    setFavorites(favorites.filter((fav) => fav.id !== propertyId));
+  };
+
+  const clearFavorites = () => {
+    setFavorites([]);
+  };
+
   return (
     <div className='p-5 row'>
+
       <div className='col-md-4'>
         <h2 className='pb-3'>Property Search</h2>
 
@@ -58,11 +79,24 @@ const Filter = () => {
           <TextField id="postcode" label="Postcode" type="text" value={postcode} onChange={(e) => setPostcode(e.target.value)} />
         </form>
 
-        {/* Favorites Section (UI Only) */}
         <div className="mt-4">
           <h3>Favorites</h3>
-          <button className="btn btn-danger mb-2" disabled>Clear Favorites</button>
-          <p>No favorite properties yet.</p>
+          <button className="btn btn-danger mb-2" onClick={clearFavorites}>Clear Favorites</button>
+          {favorites.length > 0 ? (
+            favorites.map((fav, index) => (
+              <div key={index} className="d-flex border rounded p-2 mb-2">
+                <div className="me-3">
+                  <img src={fav.picture} alt={fav.id} className="img-fluid" style={{ width: '100px', height: 'auto' }} />
+                </div>
+                <div>
+                  <h5>{fav.location}</h5>
+                  <button className="btn btn-sm btn-danger" onClick={() => removeFromFavorites(fav.id)}>Remove</button>
+                </div>
+              </div>
+            ))
+          ) : (
+            <p>No favorite properties yet.</p>
+          )}
         </div>
       </div>
 
@@ -71,7 +105,12 @@ const Filter = () => {
 
         {filteredProperties.length > 0 ? (
           filteredProperties.map((property, index) => (
-            <div key={index} className="d-flex border rounded p-3 mb-3">
+            <div
+              key={index}
+              className="d-flex border rounded p-3 mb-3"
+              draggable
+              onDragEnd={() => addToFavorites(property)}
+            >
               <div className="me-3">
                 <img src={property.picture} alt={property.id} className="img-fluid" style={{ width: '150px', height: 'auto' }} />
               </div>
@@ -82,7 +121,7 @@ const Filter = () => {
                 <p><strong>Bedrooms:</strong> {property.bedrooms}</p>
                 <p><strong>Price:</strong> ${property.price}</p>
                 <p><strong>Description:</strong> {property.description}</p>
-                <button className="btn btn-primary btn-sm" disabled>Add to Favorites</button>
+                <button className="btn btn-primary btn-sm" onClick={() => addToFavorites(property)}>Add to Favorites</button>
               </div>
             </div>
           ))
